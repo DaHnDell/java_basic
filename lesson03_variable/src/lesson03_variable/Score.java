@@ -14,6 +14,8 @@ public class Score {
 		int total = kor + mat + eng;
 		// 평균 소수점 둘째자리로 반올림
 		double avg = ((total / 3.0)*100 + 0.5)/100;
+		// double avg = (int)(total / 3d * 100)/100d; // 내림법
+
 		
 		System.out.println(avg);
 		
