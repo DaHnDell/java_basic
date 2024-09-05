@@ -90,13 +90,16 @@ public class hw0904_2Bubble {
 			String[] putCopy = new String[2];
 
 			while(true) { // 인덱스가 필요할 때는 for 문이 최적값임
-				// for(int i = 0;; i++
+				// for(int i = 0;; i++)
 //				while(!(nameIn.equals("q"))) {
 				nameIn = scan.nextLine(); // 콘솔 특성상 nextLine을 사용하는 것이 좋음
 				System.out.println(nameIn + " 을 입력하였습니다.");
 				if (nameIn.equals("q")) {
 					System.out.println("입력했던 값들을 반환합니다.");
-					for(int i = 0; i < count; i++) {
+					for(int i = 0; i < count; i++) { // s가 null일 때 출력하지 않는 식으로, 가능
+						// for(String s : strings){
+						// if(s==null){ break; }
+						// }
 						System.out.print(putCopy[i]+" ");
 					}
 					break;
@@ -113,7 +116,8 @@ public class hw0904_2Bubble {
 				System.arraycopy(tmp, count-1, putCopy, count-1, 1);
 				if(putCopy.length == count) {	
 					tmp = putCopy;
-					putCopy = new String[putCopy.length+2];
+					putCopy = new String[putCopy.length*2];
+					// strings = (Arrays.copyOf(strings, strings.length*2);
 					System.arraycopy(tmp, 0, putCopy, 0, tmp.length);
 				}
 //				System.out.println("cop : " + Arrays.toString(putCopy));

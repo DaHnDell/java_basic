@@ -23,9 +23,7 @@ public class Carmain {
 		System.out.println(pride.color);
 		System.out.println(pride.company);
 		System.out.println(pride.type);
-		
-
-	}
 	
+	}
 	
 }
