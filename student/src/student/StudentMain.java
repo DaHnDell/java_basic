@@ -37,7 +37,7 @@ public class StudentMain {
 				ss.remove();
 				break;
 			case 5: 
-//				System.out.println("종료");
+				System.out.println("종료합니다.");
 				return;
 			default:
 				break;
