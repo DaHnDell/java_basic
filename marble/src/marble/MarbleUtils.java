@@ -1,8 +1,8 @@
-package student;
+package marble;
 
 import java.util.Scanner;
 
-public class StudentUtils {
+public class MarbleUtils {
 	static Scanner scanner = new Scanner(System.in);
 	
 	static String nextLine(String msg) {
