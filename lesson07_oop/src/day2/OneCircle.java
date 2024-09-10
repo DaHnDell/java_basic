@@ -30,5 +30,4 @@ public class OneCircle {
 		System.out.println(this.r);
 		return this;
 	}
-	
 }
