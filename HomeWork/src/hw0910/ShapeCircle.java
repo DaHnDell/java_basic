@@ -7,19 +7,22 @@ public class ShapeCircle extends Shape{ // 원 클래스
 	private double area;
 //	private double height;
 //	private double volume;
-	
+
 	public ShapeCircle() {
-		
+
 	}
-	
+
 	@Override
 	public String toString() {
 		return "ShapeCircle [length=" + defLength() + ", area=" + defArea() + "]";
 	}
 
+
+
 	public ShapeCircle(double rad) {
 		this.rad = rad;
 	}
+
 	public void setRad(double rad) {
 		this.rad = rad;
 	}
@@ -28,12 +31,15 @@ public class ShapeCircle extends Shape{ // 원 클래스
 		this.length = Math.PI*this.rad*2.0;
 		return length;
 	}
+
 	public double defArea() {
 //		System.out.println("원 넓이" + );
 		this.area =  Math.PI*this.rad*this.rad;
 		return area;
 	}
+
 	
+
 //	
 //	public void setHeight(double height) {
 //		this.height = height;
@@ -51,8 +57,8 @@ public class ShapeCircle extends Shape{ // 원 클래스
 //		}
 //	}
 
+
+
 	
+
 }
-
-
-

@@ -1,28 +1,58 @@
 package hw0910;
 
-public class ShapeRect extends Shape { // 사각형 클래스 
-	// 사각형 둘레 넓이 // 구조물의 구상 클래스는 하나의 배열으로 인해 관리되어야 함
-	int side1;
-	int side2;
-	public ShapeRect() {
-	}
-	
-	public void setSide1(int side1) {
-		this.side1 = side1;
-	}
-	public void setSide2(int side2) {
-		this.side2 = side2;
-	}
-	public void printLength() {
-		(side1+side2)*2
-		System.out.println();
-	}
-	public void printArea() {
-		System.out.println(side1*side2);
-	}
-	
-	
+
+
+public class ShapeRect extends Shape {
+    private int side1;
+    private int side2;
+//    private double height;
+    public ShapeRect() {
+
+    }
+    public ShapeRect(int side1, int side2) {
+        this.side1 = side1;
+        this.side2 = side2;
+    }
+
+    @Override
+    public String toString() {
+        return "ShapeRect [length=" + defLength() + ", area=" + defArea() + "]";
+    }
+    
+    public void setSide1(int side1) {
+        this.side1 = side1;
+    }
+    
+    public int getSide1() {
+        return side1;
+    }
+    
+    public void setSide2(int side2) {
+        this.side2 = side2;
+    }
+    
+    public int getSide2() {
+        return side2;
+    }
+
+    public int defLength() {
+        return (side1 + side2) * 2;
+    }
+
+    public int defArea() {
+        return side1 * side2;
+    }
+
+
+
+//	public void setHeight(double height) {
+
+//	this.height = height;
+
+//}
+
 }
+
 
 
 
