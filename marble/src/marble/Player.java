@@ -1,9 +1,13 @@
 package marble;
 
+import marble.area.SaleLocal;
+
 public class Player {
 	String name;
 	int money = 200000; //한바퀴당 30만원 자금 추가
 	int idx;
+	SaleLocal[] own = new SaleLocal[32];
+	int ownCnt;
 	
 	public Player(String name) {
 		this.name = name;
