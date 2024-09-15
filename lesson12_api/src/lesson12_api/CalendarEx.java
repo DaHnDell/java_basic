@@ -25,7 +25,6 @@ public class CalendarEx {
 		System.out.println(cal.get(DATE));
 		System.out.println(cal.get(ERA));
 		System.out.println(cal.get(DAY_OF_MONTH));
-		
 		System.out.println(cal.get(DAY_OF_WEEK));
 		
 //		setter 는 getter 보다 파라미터가 1개 더 많습니다. 당연한 것!
