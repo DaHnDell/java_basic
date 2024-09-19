@@ -36,7 +36,11 @@ public class MyStudent {
 		return this.scoreKor + this.scoreEng + this.scoreMat;
 	}
 	
-	public double 
+	public double avg() {
+		return this.total() / 3d;
+	}
+	
+	
 
 	
 

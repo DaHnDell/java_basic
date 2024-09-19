@@ -4,6 +4,7 @@ package student;
 
 import java.util.Scanner;
 
+import student.RangeException;
 // 웬만하면 예외처리는 예외처리 파트나, 메인에서. 로직부 구현은 로직만 사용한다.
 // 서비스(로직부)에서는 무조건 던지기만 해야 함..catch 부분은 메인에서 받아야 함
 
@@ -21,23 +22,26 @@ public class StudentMain {
 //				if(input < 1 && input > 5)
 				switch(input) {
 				case 1: 
-					ss.sort();
+					ss.cloneAndSort();
 					ss.list();
 					break;
 					
 				case 2: 
-					ss.add();
 					ss.cloneAndSort();
+					ss.add();
+
 					break;
 
 				case 3: 
-					ss.modify();
 					ss.cloneAndSort();
+					ss.modify();
+
 					break;
 					
 				case 4: 
-					ss.remove();
 					ss.cloneAndSort();
+					ss.remove();
+	
 					break;
 
 				case 5: 
