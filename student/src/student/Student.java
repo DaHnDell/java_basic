@@ -1,7 +1,10 @@
 package student;
 
 public class Student implements Cloneable{
+<<<<<<< HEAD
 
+=======
+>>>>>>> cb70af044ace8661ed33895dbb0506af921fd1a2
 	private int no;
 	private String name;
 	private int kor;
@@ -15,6 +18,7 @@ public class Student implements Cloneable{
 		eng = s.eng;
 		mat = s.mat;
 	}
+<<<<<<< HEAD
 	
 	public int getNo() {
 		return no;
@@ -56,6 +60,39 @@ public class Student implements Cloneable{
 		this.mat = mat;
 	}
 
+=======
+
+	public int getNo() {
+		return no;
+	}
+	public void setNo(int no) {
+		this.no = no;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getKor() {
+		return kor;
+	}
+	public void setKor(int kor) {
+		this.kor = kor;
+	}
+	public int getEng() {
+		return eng;
+	}
+	public void setEng(int eng) {
+		this.eng = eng;
+	}
+	public int getMat() {
+		return mat;
+	}
+	public void setMat(int mat) {
+		this.mat = mat;
+	}
+>>>>>>> cb70af044ace8661ed33895dbb0506af921fd1a2
 	public Student(int no, String name, int kor, int eng, int mat) {
 		this.no = no;
 		this.name = name;
@@ -63,6 +100,7 @@ public class Student implements Cloneable{
 		this.eng = eng;
 		this.mat = mat;
 	}
+<<<<<<< HEAD
 
 	public String toString() {
 		return String.format("%4d %4s %6d %7d %7d %7d %7.2f", no, name, kor, eng, mat, total(), avg());
@@ -72,6 +110,17 @@ public class Student implements Cloneable{
 		return this.kor + this.eng + this.mat;
 	}
 
+=======
+	
+	public String toString() {
+		return String.format("%4d %4s %6d %7d %7d %7d %7.2f", no, name, kor, eng, mat, total(), avg());
+	}
+	
+	public int total() {
+		return this.kor + this.eng + this.mat;
+	}
+	
+>>>>>>> cb70af044ace8661ed33895dbb0506af921fd1a2
 	public double avg() {
 		return total() / 3d;
 	}
