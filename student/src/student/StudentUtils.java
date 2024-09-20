@@ -14,7 +14,6 @@ public class StudentUtils {
 	static int nextInt(String msg) {
 		return Integer.parseInt(nextLine(msg));
 	}
-<<<<<<< HEAD
 	
 	static <T> T next(String msg, Class<T> clazz) { // 인트 아니면 스트링 받을건데 딱히 안가릴게. 대신 Class 하나는 받을거야. 만약 인트받으면 인트, 스트링 받으면 스트링 리턴할거야.
 		System.out.println(msg);
@@ -33,9 +32,6 @@ public class StudentUtils {
 	 * () -> {} Runnable (1) -> {} Consumer () -> {1} Supplier (1) -> {1} Function
 	 * (1) - > {b} Predicate
 	 */
-=======
->>>>>>> cb70af044ace8661ed33895dbb0506af921fd1a2
-
 	// 입력 반복
 	
 	static <T> T next(String msg, Class<T> clazz, Predicate<T> con, String errMsg) {

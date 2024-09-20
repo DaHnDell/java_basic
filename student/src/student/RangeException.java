@@ -11,6 +11,5 @@ public class RangeException extends RuntimeException{
 		super(msg);
 		this.start = start;
 		this.end = end;
-	}
-	
+	}	
 }

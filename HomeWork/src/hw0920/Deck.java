@@ -1,5 +1,8 @@
 package hw0920;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Deck {
 	// 카드들
 	
