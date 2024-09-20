@@ -1,7 +1,7 @@
-//package student;
-//
-//public class StudentTest {
-//	public static void main(String[] args) {
+package student;
+
+public class StudentTest {
+	public static void main(String[] args) {
 //		Student s1 = new Student (1, "새똥이", 90, 80, 70);
 //		// 복제의 방법
 //		// 1. clone override
@@ -21,6 +21,8 @@
 //			System.out.println(s1.equals(s5));
 //			
 //		
-//	}
-//}
+		int i = StudentUtils.next("숫자", Integer.class, t-> t > 0, "0보다 큰 값");
+		System.out.println(i);
+	}
+}
 

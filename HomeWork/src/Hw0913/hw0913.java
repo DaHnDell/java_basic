@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
 //impory java.util.
 import java.util.Scanner;
 
-import student.StudentUtils;
+//import student.StudentUtils;
 
 
 public class hw0913 extends CalEx{
@@ -29,6 +29,7 @@ public class hw0913 extends CalEx{
 		int lastDay = cal.getActualMaximum(DAY_OF_MONTH);
 		int input = 0;
 		CalEx.printcal2(cal);
+		
 		while(true) {
 			try {
 				input = CalEx.nextInt("1. 이전달 2. 다음달 3. 이전해 4. 다음해 5. 날짜 검색  6. 종료");

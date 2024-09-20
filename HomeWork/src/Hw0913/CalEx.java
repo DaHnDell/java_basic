@@ -36,8 +36,8 @@ public class CalEx {
 		int startDay = cal.get(DAY_OF_WEEK);
 		int lastDay = cal.getActualMaximum(DAY_OF_MONTH);
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
-		System.out.println("========"+sdf.format(new Date(cal.getTimeInMillis()))+"월===========");
-		System.out.printf("%-2c %-3c %-3c %-3c %-3c %-3c %-3c\n", '일', '월', '화', '수', '목','금','토');
+		System.out.println("========="+sdf.format(new Date(cal.getTimeInMillis()))+"월=========");
+		System.out.printf("%-2c %-2c %-2c %-2c %-2c %-2c %-2c\n", '일', '월', '화', '수', '목','금','토');
 		
 		for(int i = 1; i < startDay; i++) { // 첫째날까지의 공백을 출력
 			System.out.print("    ");
@@ -55,7 +55,6 @@ public class CalEx {
 		System.out.println("===========================");
 		System.out.println();
 	}
-	
 	
 	static Scanner scanner = new Scanner(System.in);
 		

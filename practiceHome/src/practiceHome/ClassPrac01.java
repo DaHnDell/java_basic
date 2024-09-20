@@ -18,6 +18,7 @@ public class ClassPrac01 {
 		}
 		System.out.println(Arrays.toString(num_list));
 		solution(num_list);
+		scanner.close();
 	}	
 	static void solution(int[] arr) {
 		boolean boolIfEven;
@@ -49,5 +50,5 @@ public class ClassPrac01 {
 //			return answer;
 //		}
 //	}
-}
+
 		
