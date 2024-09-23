@@ -27,7 +27,7 @@ public class ObjectOs {
 		
 		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("oos.txt"));
 
-//		System.out.println(ois.readObject());;
+//		System.out.println(ois.readObject());
 		
 		List<Member> result = (List<Member>)ois.readObject(); // 리스트 멤버 타입으로 형변환
 		result.forEach(System.out::println);

@@ -1,4 +1,5 @@
 package student;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -7,39 +8,39 @@ import student.RangeException;
 // 서비스(로직부)에서는 무조건 던지기만 해야 함..catch 부분은 메인에서 받아야 함
 
 public class StudentMain {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, ClassNotFoundException, IOException {
 		StudentService ss = new StudentService();
 		while(true) {
-//				int input = (StudentUtils.next("1. 조회 2. 등록 3. 수정 4. 삭제 5. 종료", Integer.class, t->t>0 && t<6, "정확한 카테고리값 입력")); //ss.checkRange
 				int input = (StudentUtils.next("1. 조회 2. 등록 3. 수정 4. 삭제 5. 종료", Integer.class, t->t>0 && t<6, "정확한 카테고리값 입력")); //ss.checkRange
 				try {
 				switch(input) {
 					case 1: 
 						ss.cloneAndSort();
+						ss.studentRead();
 						ss.list();
-						ss.cloneAndSort();
 						break;
 	
 					case 2: 
 						ss.cloneAndSort();
 						ss.add();
-	
+						ss.studentSave();
 						break;
 	
 					case 3: 
 						ss.cloneAndSort();
 						ss.modify();
-	
+						ss.studentSave();
 						break;
 						
 					case 4: 
 						ss.cloneAndSort();
 						ss.remove();
-		
+						ss.studentSave();
 						break;
 	
 					case 5: 
 						System.out.println("종료합니다.");
+						ss.studentSave();
 						return;
 						
 					default:

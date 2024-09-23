@@ -25,11 +25,31 @@ public class StudentService {
 	private List<Student> nameSortedStudents; 
 	
 
+
 	{
-		students.add(new Student(100, "홍예시", 100, 100, 100)); // 하나의 인스턴스를 기억하기
-//		students.add(new Student(2, "김길동", 88, 99, 1));
-//		students.add(new Student(3, "고길동", 81, 91, 10));
-//		students.add(new Student(4, "박길동", 85, 95, 65));
+//		students.add(new Student(0, "홍예시", 100, 100, 100)); // 하나의 인스턴스를 기억하기
+	}
+	
+
+	public List<Student> getStudents() {
+		return students;
+	}
+
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+
+	public void studentSave() throws FileNotFoundException, IOException {
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\tj\\Desktop\\Student.txt"));
+		oos.writeObject(students);
+		oos.close();
+	}
+	
+	public void studentRead() throws FileNotFoundException, IOException, ClassNotFoundException {
+		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\tj\\Desktop\\Student.txt"));
+		List<Student> list =  (List<Student>)ois.readObject();
+		students = list;
+		ois.close();
 	}
 	
 	void cloneAndSort() {
@@ -59,22 +79,19 @@ public class StudentService {
 	}
 	
 	
-	public void add() throws IOException { 
-//		int no = next("학번", Integer.class, t -> t >0, "학번은 0보다 작을 수 없습니다");
-//		int no = next("학번", Integer.class, t -> true, null); // 어차피 넘버포멧 문제
+	public void add() throws FileNotFoundException, IOException { 
 		int no = next("학번", Integer.class, t -> findBy(t) == null, "입력한 학번은 이미 존재합니다.");
 	    String name = next("이름", String.class, str-> str.matches("^[가-힣]{2,4}"), "2~4글자의 한글로 구성된 이름을 입력하십시오");
 		int kor = next("국어", Integer.class, t->t>=0 && t<=100, "0~100 사이의 숫자 입력");
 		int eng = next("영어", Integer.class, t->t>=0 && t<=100, "0~100 사이의 숫자 입력");
 		int mat = next("수학", Integer.class, t->t>=0 && t<=100, "0~100 사이의 숫자 입력");
 		students.add(new Student(no, name, kor, eng, mat));
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\tj\\Desktop\\Student.txt"));
-		oos.writeObject(students);
-		oos.close();
+//		studentSave();
+		System.out.println(students);
     }
 	
 	public void list() throws FileNotFoundException, IOException, ClassNotFoundException {
-
+		studentRead();
 		int	input = (next("1. 입력순  2. 학번순  3. 이름순  4. 석차순", Integer.class, t->t>0&&t<5, "정확한 카테고리 입력"));
 		System.out.println(input);
 		List<Student> tmp = null;
@@ -96,48 +113,29 @@ public class StudentService {
 		}
 		System.out.println("학번    이름    국어    영어    수학    총점    평균");
 		System.out.println("====================================================");
-		for(int i = 0 ; i < tmp.size(); i++) {
-			System.out.println(tmp.get(i));
-		}
+		students.forEach(System.out::println);
 		System.out.println("====================================================");
 	}
 	
 	
 	public void modify() throws FileNotFoundException, IOException {
 		Student s = findBy(next("학번", Integer.class, t -> t>0, "학번은 0보다 작을 수 없습니다"));
-//		Student s = next("학번", Student.class, t -> findBy((int)t) != null, "입력한 학번은 존재하지 않습니다.");
 		System.out.println(s);
-//	    if (s == null) {
-//	        throw new NumberFormatException();
-//	    }
 		int kor = next("국어", Integer.class, t->t>=0&&t<=100, "1~100 사이의 숫자 입력");
 		int eng = next("영어", Integer.class, t->t>=0&&t<=100, "1~100 사이의 숫자 입력");
 		int mat = next("수학", Integer.class, t->t>=0&&t<=100, "1~100 사이의 숫자 입력");
-
 		String name = next("이름", String.class, str-> str.matches("^[가-힣]{2,4}"), "2~4글자의 한글로 구성된 이름을 입력하십시오");
 		s.setName(name);
 		s.setKor(kor);
 		s.setEng(eng); 
 		s.setMat(mat);
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\tj\\Desktop\\Student.txt"));
-		oos.writeObject(students);
-		oos.close();
 	}
 
-	public void remove() throws FileNotFoundException, IOException {
+	public void remove() throws FileNotFoundException, IOException, ClassNotFoundException {
 		Student s = findBy(next("학번", Integer.class, t -> t > 0, "학번은 0보다 작을 수 없습니다"));
-//		Student s = next("학번", Integer.class, t -> findBy(t) != null, "입력한 학번은 존재하지 않습니다.");
-		// 위에  있는 코드는 수정 부분과 동일함.
-
-//		if(s == null) {
-//			System.out.println();
-//			return;
-//		}
 		students.remove(s);
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("C:\\Users\\tj\\Desktop\\Student.txt"));
-		oos.writeObject(students);
-		oos.close();
 	}
+	
 	
 	private Student findBy(int no) { 
 		Student student = null;

@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class Student implements Serializable {
 
+//	private transient int no;
 	private int no;
 	private String name;
 	private int kor;
