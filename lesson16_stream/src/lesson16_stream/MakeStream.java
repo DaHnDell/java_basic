@@ -32,12 +32,17 @@ public class MakeStream {
 		stream.forEach(System.out::println);
 		
 		// 빌더 패턴으로 스트림 만들기
-		stream = Stream.builder().add("새똥이").add("길동이").add("소똥이").build().map(o->o.toString());
+		stream = Stream.builder()
+						.add("새똥이")
+						.add("길동이")
+						.add("소똥이")
+						.build()
+						.map(o->o.toString());
 		stream.forEach(System.out::println);		
 		
 		//generate 사용으로 스트림 만들기
 		stream = Stream.generate(()-> "Country Love Song").limit(10);
-		stream.forEach(System.out::println); // 스트림은 무한루프임. 사용에 있어서 조심해야 함.
+		stream.forEach(System.out::println); // 스트림은 무한루프임. 사용에 있어서 조심해야 함. 리미트 메서드를 이용하면 일정 정수값만큼 반복.
 		
 		// iterate 사용으로 스트림 만들기
 		stream = Stream.iterate("A", t -> (char)(t.charAt(0)+1)+" ").limit(26);

@@ -1,6 +1,8 @@
 package student;
 
-public class Student implements Cloneable{
+import java.io.Serializable;
+
+public class Student implements Serializable {
 
 	private int no;
 	private String name;

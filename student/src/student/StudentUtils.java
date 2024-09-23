@@ -6,14 +6,14 @@ import java.util.function.Predicate;
 public class StudentUtils {
 	static Scanner scanner = new Scanner(System.in);
 	
-	static String nextLine(String msg) {
-		System.out.println(msg);
-		System.out.print("> ");
-		return scanner.nextLine();
-	}
-	static int nextInt(String msg) {
-		return Integer.parseInt(nextLine(msg));
-	}
+//	private static String nextLine(String msg) {
+//		System.out.println(msg);
+//		System.out.print("> ");
+//		return scanner.nextLine();
+//	}
+//	private static int nextInt(String msg) {
+//		return Integer.parseInt(nextLine(msg));
+//	}
 	
 	static <T> T next(String msg, Class<T> clazz) { // 인트 아니면 스트링 받을건데 딱히 안가릴게. 대신 Class 하나는 받을거야. 만약 인트받으면 인트, 스트링 받으면 스트링 리턴할거야.
 		System.out.println(msg);

@@ -51,13 +51,15 @@ public class StudentService {
 	
 	
 	public void add() { 
-		int no = next("학번", Integer.class, t -> t >0, "학번은 0보다 작을 수 없습니다");
-	    for (Student student : students) { 
-	        if (student.getNo() == no) {
-	            throw new NumberFormatException("");
-	        }
-        }
-	    
+//		int no = next("학번", Integer.class, t -> t >0, "학번은 0보다 작을 수 없습니다");
+//		int no = next("학번", Integer.class, t -> true, null); // 어차피 넘버포멧 문제
+		int no = next("학번", Integer.class, t -> findBy(t) == null, "입력한 학번은 이미 존재합니다.");
+//	    for (Student student : students) { 
+//	        if (student.getNo() == no) {
+//	            throw new NumberFormatException("");
+//	            
+//	        }
+//        }
 	    String name = next("이름", String.class, str-> str.matches("^[가-힣]{2,4}"), "2~4글자의 한글로 구성된 이름을 입력하십시오");
 		int kor = next("국어", Integer.class, t->t>=0 && t<=100, "0~100 사이의 숫자 입력");
 		int eng = next("영어", Integer.class, t->t>=0 && t<=100, "0~100 사이의 숫자 입력");
@@ -96,10 +98,11 @@ public class StudentService {
 	
 	public void modify() {
 		Student s = findBy(next("학번", Integer.class, t -> t>0, "학번은 0보다 작을 수 없습니다"));
+//		Student s = next("학번", Student.class, t -> findBy((int)t) != null, "입력한 학번은 존재하지 않습니다.");
 		System.out.println(s);
-	    if (s == null) {
-	        throw new NumberFormatException();
-	    }
+//	    if (s == null) {
+//	        throw new NumberFormatException();
+//	    }
 		int kor = next("국어", Integer.class, t->t>=0&&t<=100, "1~100 사이의 숫자 입력");
 		int eng = next("영어", Integer.class, t->t>=0&&t<=100, "1~100 사이의 숫자 입력");
 		int mat = next("수학", Integer.class, t->t>=0&&t<=100, "1~100 사이의 숫자 입력");
@@ -113,10 +116,13 @@ public class StudentService {
 
 	public void remove() {
 		Student s = findBy(next("학번", Integer.class, t -> t > 0, "학번은 0보다 작을 수 없습니다"));
-		if(s == null) {
-			System.out.println("입력한 학번은 존재하지 않습니다.");
-			return;
-		}
+//		Student s = next("학번", Integer.class, t -> findBy(t) != null, "입력한 학번은 존재하지 않습니다.");
+		// 위에  있는 코드는 수정 부분과 동일함.
+
+//		if(s == null) {
+//			System.out.println();
+//			return;
+//		}
 		students.remove(s);
 	}
 	

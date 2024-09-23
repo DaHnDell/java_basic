@@ -9,6 +9,7 @@ public class StudentMain {
 	public static void main(String[] args) {
 		StudentService ss = new StudentService();
 		while(true) {
+//				int input = (StudentUtils.next("1. 조회 2. 등록 3. 수정 4. 삭제 5. 종료", Integer.class, t->t>0 && t<6, "정확한 카테고리값 입력")); //ss.checkRange
 				int input = (StudentUtils.next("1. 조회 2. 등록 3. 수정 4. 삭제 5. 종료", Integer.class, t->t>0 && t<6, "정확한 카테고리값 입력")); //ss.checkRange
 				switch(input) {
 					case 1: 
