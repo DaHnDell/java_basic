@@ -43,12 +43,6 @@ public class StudentMain {
 						break;
 				}
 			}
-//		catch(NumberFormatException e) {
-//				System.out.println(e.getMessage()); // 자바랭에서 호출하는 throw 때문에 우리가 별도의 메세지를 수정할 수 없음 . 따 라서 그냥 메세지 한줄 출력하고 마는 것.
-//				System.out.println("정확한 숫자를 입력하세요");
-//			}catch(RuntimeException e) {
-//				System.out.println(e.getMessage());
-//			}
 		}	
 }
 

@@ -8,13 +8,13 @@ public class Student implements Cloneable{
 	private int eng;
 	private int mat;
 
-	public Student(Student s) {
-		no  = s.no;
-		name = s.name;
-		kor = s.kor;
-		eng = s.eng;
-		mat = s.mat;
-	}
+//	public Student(Student s) {
+//		no  = s.no;
+//		name = s.name;
+//		kor = s.kor;
+//		eng = s.eng;
+//		mat = s.mat;
+//	}
 	
 	public int getNo() {
 		return no;
