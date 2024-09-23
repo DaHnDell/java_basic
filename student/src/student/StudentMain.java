@@ -1,4 +1,5 @@
 package student;
+import java.io.IOException;
 import java.util.Scanner;
 
 import student.RangeException;
@@ -11,6 +12,7 @@ public class StudentMain {
 		while(true) {
 //				int input = (StudentUtils.next("1. 조회 2. 등록 3. 수정 4. 삭제 5. 종료", Integer.class, t->t>0 && t<6, "정확한 카테고리값 입력")); //ss.checkRange
 				int input = (StudentUtils.next("1. 조회 2. 등록 3. 수정 4. 삭제 5. 종료", Integer.class, t->t>0 && t<6, "정확한 카테고리값 입력")); //ss.checkRange
+				try {
 				switch(input) {
 					case 1: 
 						ss.cloneAndSort();
@@ -43,7 +45,13 @@ public class StudentMain {
 					default:
 						break;
 				}
-			}
-		}	
-}
+				}catch(IOException I) {
+					System.out.println(I.getMessage());
+				}catch(ClassNotFoundException C) {
+					System.out.println(C.getMessage());
+				}
+				}
+	}
+}	
+
 
