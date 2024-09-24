@@ -2,23 +2,17 @@ package student;
 
 import java.io.Serializable;
 
-public class Student implements Serializable {
+@SuppressWarnings("serial")
+public class Student implements Cloneable, Serializable {
 
 //	private transient int no;
+	
 	private int no;
 	private String name;
 	private int kor;
 	private int eng;
 	private int mat;
 
-//	public Student(Student s) {
-//		no  = s.no;
-//		name = s.name;
-//		kor = s.kor;
-//		eng = s.eng;
-//		mat = s.mat;
-//	}
-	
 	public int getNo() {
 		return no;
 	}
