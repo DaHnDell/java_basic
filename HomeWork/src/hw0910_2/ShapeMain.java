@@ -17,7 +17,7 @@ public class ShapeMain {
 		
 		Shape[] shapes = new Shape[3];
 		shapes[0] = s1;
-		shapes[1] = s2;
+//		shapes[1] = s2;
 		shapes[2] = s3;
 		
 		for(Shape s : shapes) {

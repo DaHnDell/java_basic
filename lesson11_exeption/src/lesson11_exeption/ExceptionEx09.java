@@ -7,7 +7,7 @@ public class ExceptionEx09 {
 	public static void main(String[] args) {
 		
 		try(FileOutputStream fos =  new FileOutputStream("1.txt")) {
-			fos = new FileOutputStream("1.txt");
+//			fos = new FileOutputStream("1.txt");
 			byte[] bs = {'A', 'B', 'C', 'D', 'E', 234 - 256, 176 -256, 144-256};
 			fos.write(bs);
 		}
