@@ -22,7 +22,7 @@ public class DateEx {
 		
 		Date christ = new Date(123, 11, 25, 00, 00, 00); // DATE는 언제나 Epoch 값을 활용을 하거나 long 값을 활용할 때 
 		System.out.println(christ);
-		System.out.println(christ.get()); // 요일 자체의 값(월화수목금토일)은 바꿀 수 없다. 즉, setDay 함수는 없다.
+//		System.out.println(christ.get()); // 요일 자체의 값(월화수목금토일)은 바꿀 수 없다. 즉, setDay 함수는 없다.
 		
 	}
 }

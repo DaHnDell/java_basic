@@ -39,7 +39,7 @@ public class ClassPrac01 {
 		System.out.println(Arrays.toString(solArr));
 	}
 }
-
+// 프로그래머스 문제풀이
 //class solution {
 //	public int[] solution(int[] num_list) {
 //		int[] answer = new int[2];

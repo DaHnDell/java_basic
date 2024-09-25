@@ -1,5 +1,5 @@
 package marble.area;
-
+//
 public abstract class SaleLocal extends Local{
 //	String color;
 	int colorIdx;

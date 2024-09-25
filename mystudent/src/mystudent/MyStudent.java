@@ -10,7 +10,7 @@ public class MyStudent {
 	int scoreMat;
 	int[] stuArr;
 	
-
+//
 	public MyStudent() { // 기본 생성자
 		
 	}

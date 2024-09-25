@@ -25,5 +25,7 @@ public class ArraysEx {
 		
 		int[] arr3 = IntStream.range(1, 6).limit(5).toArray();
 		System.out.println(Arrays.toString(arr3));
+		
+		// 수정본
 	}
 }

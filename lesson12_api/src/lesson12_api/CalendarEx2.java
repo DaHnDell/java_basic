@@ -12,7 +12,7 @@ public class CalendarEx2 {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		System.out.println(sdf.format(new Date(cal.getTimeInMillis())));
 		
-		Calendar.DATE - 
+		int date = Calendar.DATE; 
 		
 		cal.add(Calendar.DATE, -10000);
 		System.out.println(sdf.format(new Date(cal.getTimeInMillis())));

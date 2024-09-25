@@ -1,5 +1,5 @@
 package marble.area;
-
+//
 public abstract class Local {
 	String name;
 	int idx;

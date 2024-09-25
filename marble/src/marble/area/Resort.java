@@ -1,5 +1,5 @@
 package marble.area;
-
+//
 public class Resort extends SaleLocal{
 	static final int BUILD_COST = 10; // 관광지는 상수값으로 정해져 있음..!
 	public static final int FEE = 8; // 인트 배열의 고정값 

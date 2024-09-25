@@ -1,5 +1,5 @@
 package marble.area;
-
+//
 public class City extends SaleLocal{
 	
 	public City(int colorIdx, String name, int idx) {
