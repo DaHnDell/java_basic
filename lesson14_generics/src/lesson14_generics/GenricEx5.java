@@ -53,7 +53,7 @@ class Generic5<T>{
 	public T getT() {
 		return t;
 	}
-	public T set(T t) {
-		this.t = t;
-	}
+//	public T set(T t) {
+//		this.t = t;
+//	}
 }

@@ -29,6 +29,6 @@ public class Final {
 //		Collections.reverseOrder(list);
 		Collections.reverse(list);
 		System.out.println(list);
-		Collections.
+//		Collections.
 	}
 }

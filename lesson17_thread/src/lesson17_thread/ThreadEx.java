@@ -4,12 +4,12 @@ public class ThreadEx extends Thread{
 	public static void main(String[] args) {
 		
 		Thread t1 = new ThreadEx();
-		Thread t2 = new Thread(new RunnableImpl());
+//		Thread t2 = new Thread(new RunnableImpl());
 		
-		t2.setPriority(6);
+//		t2.setPriority(6);
 
-		new ThreadExtend().start();
-		new Thread(new RunnableImpl(), "러너블쓰레드").start(); // 무엇을 하던지 스타트로 호출하면 계속 무한정으로 호출 가능
+//		new ThreadExtend().start();
+//		new Thread(new RunnableImpl(), "러너블쓰레드").start(); // 무엇을 하던지 스타트로 호출하면 계속 무한정으로 호출 가능
 		System.out.println("메인 종료" + Thread.currentThread().getName());
 	}
 
