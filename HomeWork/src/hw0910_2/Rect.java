@@ -10,9 +10,9 @@ public class Rect extends Shape implements D3{
 		this.y = y;
 	}
 	
-	public double Rect() {
-		super();
-	}
+//	public double Rect() {
+//		super();
+//	}
 
 	@Override
 	public double volume() {

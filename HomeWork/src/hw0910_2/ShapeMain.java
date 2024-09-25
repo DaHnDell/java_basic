@@ -6,12 +6,12 @@ public class ShapeMain {
 		Shape s1 = new Circle(5);
 		
 		System.out.println(s1.area());
-		System.out.println((((D2)s1).length())));
+//		System.out.println((((D2)s1).length())));
+//		
+//		Shape s2 = new Cylinder(10, 3);
 		
-		Shape s2 = new Cylinder(10, 3);
-		
-		System.out.println(s2.area());
-		System.out.println((((D3)s2).volume())));
+//		System.out.println(s2.area());
+//		System.out.println((((D3)s2).volume())));
 		
 		Shape s3 = new Rect(5, 4);
 		

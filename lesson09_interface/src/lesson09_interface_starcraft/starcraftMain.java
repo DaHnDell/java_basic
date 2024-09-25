@@ -1,7 +1,7 @@
 package lesson09_interface_starcraft;
 
 
-@SupressWarnings ({"unused", "deprecation"})
+@SuppressWarnings ({"unused", "deprecation"})
 public class starcraftMain {
 	public static void main(String[] args) {
 		SCV scv = new SCV();
