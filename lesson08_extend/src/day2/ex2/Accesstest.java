@@ -6,7 +6,7 @@ public class Accesstest {
 		a.m();
 	}
 }
-
+//
 //class A {
 //	void m() {
 //		System.out.println("A.m()");

@@ -9,5 +9,5 @@ public class Parent {
 	void run() {
 		System.out.println("부모가 달린다"); 
 	}
-	
+	//
 }

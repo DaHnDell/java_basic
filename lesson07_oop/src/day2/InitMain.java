@@ -6,7 +6,7 @@ public class InitMain {
 	int num = 10;
 	int[] arr = new int[10];
 	int[] arr2 = new int[10];
-		
+		// 객체지향
 	public InitMain()
 	{
 		System.out.println("생성자");
