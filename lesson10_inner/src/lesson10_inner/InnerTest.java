@@ -1,7 +1,6 @@
 package lesson10_inner;
 
 public class InnerTest {
-//	int i;
 	public static void main(String[] args) {
 //		System.out.println(i);//초기화 시점과
 		Outer outer = new Outer();
@@ -26,7 +25,7 @@ class Outer{
 		static int i3;
 		int si3;
 		{
-			System.out.println(i); // i 변수는 클래스 변수가 메모리가 로드되면서 한번에 로드되기 때문에, 
+//			System.out.println(i); // i 변수는 클래스 변수가 메모리가 로드되면서 한번에 로드되기 때문에, 
 		}
 		
 	}
